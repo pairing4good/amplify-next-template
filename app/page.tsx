@@ -7,6 +7,7 @@ import { generateClient } from "aws-amplify/data";
 import type { Schema } from "@/amplify/data/resource";
 import "./../app/app.css";
 import { Amplify } from "aws-amplify";
+import { StorageManager } from '@aws-amplify/ui-react-storage';
 import outputs from "@/amplify_outputs.json";
 import "@aws-amplify/ui-react/styles.css";
 
@@ -61,6 +62,12 @@ export default function App() {
             Review next steps of this tutorial.
           </a>
         </div>
+        <StorageManager
+          acceptedFileTypes={['image/*']}
+          path="public/"
+          maxFileCount={1}
+          isResumable
+        />
         <button onClick={signOut}>Sign out</button>
       </main>
       )}
