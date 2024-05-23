@@ -8,9 +8,9 @@ import { storage } from './storage/resource';
 
 const backend = defineBackend({
   auth,
+  storage,
   data,
   myDynamoDBFunction,
-  storage,
 });
 
 const eventSource = new DynamoEventSource(backend.data.resources.tables["Todo"], {

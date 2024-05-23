@@ -64,7 +64,7 @@ export default function App() {
         </div>
         <StorageManager
           acceptedFileTypes={['image/*']}
-          path="public/"
+          path="picture-submissions/"
           maxFileCount={1}
           isResumable
         />
